@@ -1,12 +1,4 @@
-<form action="#" method="post" enctype="multipart/form-data">
-    <label for="img">Upload Any image</label>
-    <input type="file" name="img" id="img" accept="image/*">
-    <input type="submit" name="submit" value="Submit">
-</form>
-<?php
-if (isset($_POST['submit'])) {
 
-    try {
         $FILE = $_FILES['img'] ?? null;
 
         if (!$FILE || $FILE['error'] != UPLOAD_ERR_OK) {
